@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simpleform</title>
+    <style>
+        .phongchu{
+            font-family: "Lucida Sans Unicode","Lucida Grande", Tahoma , sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form action="Thuc_Hanh_Tao_formCB.html" method="get" class="phongchu">
+        <h2>Order Form</h2>
+        <p>What would you like to buy ?</p>
+        <select>
+            <option value=" ">A</option>
+            <option>B (+ 0.5$)</option>
+            <option>C (+ 0.5$)</option>
+        </select>
+        <p>How many would you like to order ?</p>
+        <input type="radio" name="rd">1 - $10<br>
+        <input type="radio" name="rd">2 - $20<br>
+        <input type="radio" name="rd">3 - $25<br>
+        <p>Name<span style="color: red">*</span>:</p>
+        <input name="firstname" type="text" placeholder="firstname" size="15"/>
+        <input name="lastname" type="text" placeholder="lastname" size="15"/>
+        <p>Email :</p>
+        <input name="email" type="text" size="35"> <br>
+        <p>Phone number :</p>
+        <input name="phone1" type="text" size="5">-
+        <input name="phone2" type="text" size="5">-
+        <input name="phone3" type="text" size="5"><br><br><br>
+        <input name="submit" type="submit" value="submit">
+    </form>
+
+</body>
+</html>
