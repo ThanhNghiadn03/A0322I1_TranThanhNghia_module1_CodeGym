@@ -5,9 +5,67 @@
     <title>Title</title>
 </head>
 <body style="margin: auto;width: 500px">
-    <table>
+    <table style="margin: auto" cellpadding="10">
+        <h1 style="background-color: #ff7c3b;color: white;text-align: center">SỞ THÍCH CỦA BẠN</h1>
         <tr>
+            <td>Họ và tên : </td>
+            <td colspan="3">
+                <input name="hvt" type="text"><br>
+            </td>
         </tr>
+        <tr>
+            <td>Email : </td>
+            <td colspan="3">
+                <input name="email" type="text"><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Sở thích : </td>
+            <td>
+                <input type="checkbox" name="hobby1" value="Thể thao" id="hobby1">
+                <label for="hobby1">Thể thao</label>
+            </td>
+            <td>
+                <input type="checkbox" name="hobby2" value="Âm nhạc" id="hobby2">
+                <label for="hobby2">Âm nhạc</label>
+            </td>
+            <td>
+                <input type="checkbox" name="hobby3" value="Đọc sách" id="hobby3">
+                <label for="hobby3">Đọc sách</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="checkbox" name="hobby4" value="Lướt web" id="hobby4">
+                <label for="hobby4">Lướt web</label>
+            </td>
+            <td>
+                <input type="checkbox" name="hobby5" value="Chơi game" id="hobby5">
+                <label for="hobby5">Thể thao</label>
+            </td>
+            <td>
+                <input type="checkbox" name="hobby6" value="Điện ảnh" id="hobby6">
+                <label for="hobby6">Điện ảnh</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="checkbox" name="hobby7" value="Du lịch" id="hobby7">
+                <label for="hobby7">Du lịch</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" name="submit" value="Gửi thông tin">
+            </td>
+            <td>
+                <input type="reset" name="reset" value="Nhập lại">
+            </td>
+        </tr>
+
     </table>
 </body>
 </html>
