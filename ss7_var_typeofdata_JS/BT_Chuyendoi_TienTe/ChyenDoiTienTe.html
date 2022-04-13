@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body style="margin: auto;width: 500px">
+<form>
+    <table cellpadding="10">
+        <tr>
+            <th>Amount</th>
+            <th>From currency</th>
+            <th>To currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                <input name="amount" type="number" value="1" id="value">
+            </td>
+            <td>
+                <select id="from">
+                    <option value="1">VND</option>
+                    <option value="23000">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="to">
+                    <option value="1">VND</option>
+                    <option value="23000">USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" value="convert" style="background-color: #2977d3;color: white;font-size: 20px" onclick="convert()">Convert</button>
+            </td>
+        </tr>
+        <tr>
+            <td style="color: #2977d3">Result : </td>
+            <td colspan="3" id="result" style="color: #2977d3"></td>
+        </tr>
+    </table>
+</form>
+<script>
+    function convert() {
+        let giatri = document.getElementById('value').value;
+        let tg1 = parseFloat(document.getElementById('from').value);
+        let tg2 = parseFloat(document.getElementById('to').value);
+        let chuyendoi = giatri*(tg1/tg2);
+        document.getElementById('result').innerHTML=chuyendoi;
+    }
+
+</script>
+</body>
+</html>
