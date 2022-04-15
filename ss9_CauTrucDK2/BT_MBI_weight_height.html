@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MBI</title>
+</head>
+<body>
+<script>
+    let weight = parseFloat(prompt('Enter your weight : '));
+    let height = parseFloat(prompt('Enter your height : '));
+    let mbi = weight/(height*height);
+    if (mbi < 18.5) {
+        alert('Underweight');
+    } else if (mbi >= 18.5 && mbi < 25) {
+        alert('Normal');
+    } else if (mbi >= 25 && mbi < 30) {
+        alert('Overweight');
+    } else {
+        alert('Obese');
+    }
+    console.log(mbi);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event mouse</title>
+</head>
+<body>
+<form>
+    <img src="depositphotos_11370043-stock-photo-soccer-ball.jpg" id="my image" style="width: 200px">
+    <p>Click button below to move the image to right</p>
+    <button type="button" value="click me" onclick="moveright()">click me</button>
+</form>
+<script>
+    let imb = null;
+    function init() {
+        imb = document.getElementById('my image');
+        imb.style.position = 'relative';
+        imb.style.left = '0';
+    }
+    function moveright() {
+        imb.style.left = parseInt(imb.style.left) + 30 + 'px';
+    }
+    window.onload = init();
+</script>
+</body>
+</html>
