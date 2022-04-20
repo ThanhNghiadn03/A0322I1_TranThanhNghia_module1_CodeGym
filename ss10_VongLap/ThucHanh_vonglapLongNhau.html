@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+</head>
+<body>
+<script>
+    let lines = '<table border="1" cellpadding="10">';
+    for (let i=1 ; i<=10 ; i++) {
+        lines = lines + '<tr>';
+        for (let j=1 ; j<=10 ; j++) {
+            let productOf2num = i*j;
+            lines = lines + '<td>'+ productOf2num + '</td>';
+        }
+        lines = lines + '</tr>'
+    }
+    lines = lines + '</table>'
+    document.write(lines);
+</script>
+</body>
+</html>

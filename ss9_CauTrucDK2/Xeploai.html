@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp loại</title>
+</head>
+<body>
+<script>
+    let final = parseFloat(prompt('Nhập điểm cuối kì : '));
+    let mid = parseFloat(prompt('Nhập điểm giữa kì : '));
+    let exam = parseFloat(prompt('Nhập điểm kiểm tra : '));
+    let avr = (exam + 2*mid + 3*final)/6;
+    if(avr >= 8) {
+        if (final >= 6.5 && mid >= 6.5 && exam >= 6.5) {
+            document.write('Điểm trung bình : ' + avr);
+            document.write('<br>');
+            document.write('Xếp loại : Giỏi');
+        } else {
+            document.write('Điểm trung bình : ' + avr);
+            document.write('<br>');
+            document.write('Xếp loại : Khá');
+        }
+    } else if (avr >= 6.5) {
+        if (final >= 5.0 && mid >= 5.0 && exam >= 5.0) {
+            document.write('Điểm trung bình : ' + avr);
+            document.write('<br>');
+            document.write('Xếp loại : Khá');
+        } else {
+            document.write('Điểm trung bình : ' + avr);
+            document.write('<br>');
+            document.write('Xếp loại : Trung bình');
+        }
+    } else if (avr >= 5.0) {
+        if (final >= 3.0 && mid >= 3.0 && exam >= 3.0) {
+            document.write('Điểm trung bình : ' + avr);
+            document.write('<br>');
+            document.write('Xếp loại : Trung bình');
+        } else {
+            document.write('Điểm trung bình : ' + avr);
+            document.write('<br>');
+            document.write('Xếp loại : Yếu');
+        }
+    } else {
+        document.write('Điểm trung bình : ' + avr);
+        document.write('<br>');
+        document.write('Xếp loại : Yếu')
+    }
+</script>
+</body>
+</html>

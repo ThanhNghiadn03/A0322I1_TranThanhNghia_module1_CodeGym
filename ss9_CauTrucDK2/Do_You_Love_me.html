@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me</title>
+</head>
+<body>
+<h1>Do you love me ? </h1>
+<button type="button" name="Yes" value="Yes" id="Yes" onclick="happy()">Yes</button>
+<button type="button" id="No" onmouseover="notPermit()">No</button>
+<script>
+    function happy() {
+        alert('<3')
+    }
+    let no = null;
+    function init() {
+        no = document.getElementById('No');
+        no.style.position = 'relative';
+        no.style.left = '0';
+        no.style.top = '0';
+    }
+    function notPermit() {
+        let left = Math.random()*200;
+        let top = Math.random()*200;
+        no.style.left = parseInt(no.style.left) + left + 'px';
+        no.style.top = parseInt(no.style.top) + top + 'px';
+    }
+    window.onload = init();
+    window.innerHeight = 100;
+    window.innerWidth = 100;
+</script>
+</body>
+</html>

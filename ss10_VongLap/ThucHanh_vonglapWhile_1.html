@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng</title>
+</head>
+<body>
+<script>
+    /*Viết chương trình nhận vào một số từ hộp thoại, việc nhập kết thúc khi người dùng nhập vào giá trị -1.
+     Mỗi giá trị nhập được sẽ được hiển thị ra và thực hiện tính tổng các giá trị đó.
+     */
+    let sum = 0;
+    let number = parseInt(prompt('Nhập vào 1 số : '));
+    let times = 1;
+    while (number != -1) {
+        number = parseInt(prompt('Nhập vào 1 số : '));
+        times ++;
+        if (number != -1) {
+            document.write(number + ' + ');
+        } else {
+            document.write('( ' + number + ' )');
+            break;
+        }
+        sum += number;
+    }
+    if (number == -1) {
+        sum += number;
+        if (times == 1) {
+            document.write(sum);
+        } else {
+            document.write(' = ' + sum);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Tổng</title>
+</head>
+<body>
+<script>
+    /*Viết chương trình nhập vào một số bất kỳ lớn hơn 0. Tính tổng các phần tử từ 1 đến số vừa nhập vào.*/
+    let anynumber = parseInt(prompt('Nhập vào 1 số bất kì lớn hơn 0 : '));
+    let sum = 0;
+    for (let i=1 ; i <= anynumber ; i++) {
+        sum += i ;
+    }
+    document.write('Tổng các số từ 1 đến '+ anynumber + ' là : ' + sum);
+</script>
+</body>
+</html>
