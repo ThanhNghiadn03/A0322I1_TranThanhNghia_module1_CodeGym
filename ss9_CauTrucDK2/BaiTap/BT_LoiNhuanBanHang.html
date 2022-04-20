@@ -10,8 +10,16 @@
     5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu.
     10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.
     20 % nếu tổng doanh số là lớn hơn 300 triệu.*/
-
-
+    let income = parseFloat(prompt('Nhập vào doanh số bán hàng : '));
+    let commission = 0;
+    if (income > 300000000) {
+        commission = (20/100)*income;
+    } else if (income > 100000000) {
+        commission = (10/100)*income;
+    } else {
+        commission = (5/100)*income;
+    }
+    document.write('Doanh thu : ' + income + '<br>' + 'Tiền hoa hồng : ' + commission);
 </script>
 
 </body>

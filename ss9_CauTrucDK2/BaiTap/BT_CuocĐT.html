@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<script>
+    /*tính cước điện thoại bàn cho một hộ gia đình với các thông số như sau:
+    Phí thuê bao bắt buộc là 25 nghìn.
+    600 đồng cho mỗi gọi của 50 phút đầu tiên.
+    400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+    200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.
+     */
+    let phoneCharge = 25000;
+    let numberOfmMinutes = parseInt(prompt('Nhập vào số phút gọi : '));
+    let totalminutes = numberOfmMinutes;
+    let firstPrice = 50;
+    let secondPrice = 200;
+    if (numberOfmMinutes <= 50) {
+        phoneCharge += numberOfmMinutes*600;
+    } else if (numberOfmMinutes <= 200) {
+        numberOfmMinutes -= 50;
+        phoneCharge = phoneCharge + 600*firstPrice + 400*numberOfmMinutes;
+    } else {
+        numberOfmMinutes -= 200;
+        phoneCharge = phoneCharge + 600*firstPrice + 400*secondPrice + 200*numberOfmMinutes;
+    }
+    document.write('Số phút gọi : '+ totalminutes + '<br>' + 'Tổng cước thuê bao là : '+ phoneCharge);
+</script>
+</body>
+</html>
