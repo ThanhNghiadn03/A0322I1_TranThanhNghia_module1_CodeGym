@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích tam giác vuông</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<h2>Tính diện tích hoặc chu vi tam giác vuông</h2>
+<table style="margin-top: 200px;margin: auto;width: 500px" border="1" cellpadding="10">
+    <tr>
+        <th>Nhập vào 2 cạnh góc vuông và 1 cạnh huyền của tam giác vuông</th>
+        <th>Diện tích</th>
+        <th>Chu vi</th>
+    </tr>
+    <tr>
+        <td>
+            <label>Cạnh góc vuông 1 : <br><input type="number" name="canh1" id="canh1" value="0"></label>
+            <br>
+            <label>Cạnh góc vuông 2 : <br><input type="number" name="canh2" id="canh2" value="0"></label>
+            <br>
+            <label>Cạnh huyền : <br><input type="number" name="canhhuyen" id="canhhuyen" value="0"></label>
+            <br>
+            <br>
+            <button id="submit" onclick="tgv()">button</button>
+        </td>
+        <td id="area">X</td>
+        <td id="perimeter">X</td>
+    </tr>
+</table>
+<script src="tamgiacvuong.js">
+
+</script>
+</body>
+</html>

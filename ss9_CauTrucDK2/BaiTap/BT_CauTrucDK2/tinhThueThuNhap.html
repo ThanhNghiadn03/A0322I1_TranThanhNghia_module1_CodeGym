@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    /*
+4 triệu đồng/tháng 0%;
+Trên 4 - 6 triệu đồng/tháng: 5%;
+Trên 6 - 9 triệu đồng: 10%;
+Trên 9 - 14 triệu đồng/tháng: 15%;
+trên 14 - 24 triệu đồng/tháng: 20%;
+Trên 24 - 44 triệu đồng/tháng: 25%;
+Trên 44 - 84 triệu đồng/tháng: 30%;
+Trên 84 triệu đồng: 35%.
+*/
+    let income = parseFloat(prompt('Nhập vào thu nhập cá nhân của bạn trong 1 tháng (VND) : '));
+    let incomeTax = 1;
+    if (income <= 4000000) {
+        incomeTax = 0;
+        document.write('Thu nhập của bạn là : '+ income + '<br><br>');
+        document.write('Thuế thu nhập cá nhân của bạn là : ' + incomeTax);
+    } else if (income <= 6000000) {
+        incomeTax = (5/100)*income;
+        document.write('Thu nhập của bạn là : '+ income + '<br><br>');
+        document.write('Thuế thu nhập cá nhân của bạn là : ' + incomeTax);
+    } else if (income <= 9000000) {
+        incomeTax = (10/100)*income;
+        document.write('Thu nhập của bạn là : '+ income + '<br><br>');
+        document.write('Thuế thu nhập cá nhân của bạn là : ' + incomeTax);
+    } else if (income <= 14000000) {
+        incomeTax = (15/100)*income;
+        document.write('Thu nhập của bạn là : '+ income + '<br><br>');
+        document.write('Thuế thu nhập cá nhân của bạn là : ' + incomeTax);
+    } else if (income <= 24000000) {
+        incomeTax = (20/100)*income;
+        document.write('Thu nhập của bạn là : '+ income + '<br><br>');
+        document.write('Thuế thu nhập cá nhân của bạn là : ' + incomeTax);
+    } else if (income <= 44000000) {
+        incomeTax = (25/100)*income;
+        document.write('Thu nhập của bạn là : '+ income + '<br><br>');
+        document.write('Thuế thu nhập cá nhân của bạn là : ' + incomeTax);
+    } else if (income <= 84000000) {
+        incomeTax = (30/100)*income;
+        document.write('Thu nhập của bạn là : '+ income + '<br><br>');
+        document.write('Thuế thu nhập cá nhân của bạn là : ' + incomeTax);
+    } else {
+        incomeTax = (35/100)*income;
+        document.write('Thu nhập của bạn là : '+ income + '<br><br>');
+        document.write('Thuế thu nhập cá nhân của bạn là : ' + incomeTax);
+    }
+</script>
+</body>
+</html>

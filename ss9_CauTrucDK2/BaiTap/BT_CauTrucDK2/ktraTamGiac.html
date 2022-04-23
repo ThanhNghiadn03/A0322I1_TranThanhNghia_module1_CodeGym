@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tam giác</title>
+</head>
+<body>
+<script>
+    let canh1 = parseInt(prompt('Nhập vào số đo cạnh thứ 1 của tam giác : '));
+    let canh2 = parseInt(prompt('Nhập vào số đo cạnh thứ 2 của tam giác : '));
+    let canh3 = parseInt(prompt('Nhập vào số đo cạnh thứ 3 của tam giác : '));
+    if (canh1>0 && canh2>0 && canh3>0) {
+        if ((canh1+canh2)>canh3) {
+            if ((canh1+canh3) > canh2) {
+                if ((canh2+canh3) >canh1) {
+                    alert('Đây đúng là 1 tam giác');
+                } else {
+                    alert('Đây không phải là 1 tam giác');
+                }
+            } else {
+                alert('Đây không phải là 1 tam giác');
+            }
+        } else {
+            alert('Đây không phải là 1 tam giác');
+        }
+    } else {
+        alert('Đây không phải là 1 tam giác');
+    }
+</script>
+</body>
+</html>

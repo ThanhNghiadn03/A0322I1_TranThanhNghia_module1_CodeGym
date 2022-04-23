@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển độ C sang độ F</title>
+</head>
+<body>
+    <h2>Chuyển đổi nhiệt độ</h2>
+<script>
+    let choose = prompt('Nhập 1 nếu bạn muốn chọn đổi nhiệt độ từ độ C sang độ F , chọn 2 nếu bạn muốn đổi nhiệt độ từ độ F sang độ C');
+    let nhietdo = 0;
+    let nhietdoNotfix = 0;
+    if (choose == 1) {
+        nhietdo = parseFloat(prompt('Nhập vào nhiệt độ (độ C) : '));
+        nhietdoNotfix = nhietdo;
+        nhietdo = nhietdo * 9/5 + 32;
+        document.write('Độ C : ' + nhietdoNotfix + ' --> Độ F : '+ nhietdo);
+    } else if (choose == 2) {
+        nhietdo = parseFloat(prompt('Nhập vào nhiệt độ (độ F) : '));
+        nhietdoNotfix = nhietdo;
+        nhietdo = (nhietdo - 32) * 5/9;
+        document.write('Độ F : ' + nhietdoNotfix + ' --> Độ C : '+ nhietdo);
+    } else {
+        alert('Nhập không hợp lệ');
+    }
+
+</script>
+</body>
+</html>

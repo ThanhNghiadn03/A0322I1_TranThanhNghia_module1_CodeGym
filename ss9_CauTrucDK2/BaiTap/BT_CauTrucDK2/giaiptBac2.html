@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<h2>Giải phương trình bậc hai : ax^2 + bx + c = 0</h2>
+<script>
+    let a = parseFloat(prompt('Nhập vào a : '));
+    let b = parseFloat(prompt('Nhập vào b : '));
+    let c = parseFloat(prompt('Nhập vào c : '));
+    if (a==0) {
+        if (b==0) {
+            if (c==0) {
+                document.write('Phương trình bậc 2 có vô số nghiệm khi a = 0 , b = 0 và c = 0');
+            } else {
+                document.write('Phương trình bậc 2 vô nghiệm khi a = 0 , b = 0 và c != 0');
+            }
+        } else {
+            document.write('Phương trình bậc 2 có 1 nghiệm x = '+ (-c/b));
+        }
+    } else {
+        let delta = b*b - 4*a*c;
+        if (delta < 0) {
+            document.write('Phương trình bậc 2 vô nghiệm vì delta ' + delta + ' < 0');
+        } else if (delta == 0) {
+            document.write('Phương trình bậc 2 có nghiệm kép x = ' + (-b/(2*a)) + ' vì delta = 0');
+        } else {
+            document.write('Phương trình bậc 2 có 2 nghiệm phân biệt x1 = ' + ((-b-Math.sqrt(delta))/(2*a)) + ' và x2 = ' + ((-b+Math.sqrt(delta))/(2*a)));
+        }
+    }
+</script>
+</body>
+</html>

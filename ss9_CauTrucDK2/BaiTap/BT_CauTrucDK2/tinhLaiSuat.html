@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+<h2>Tính lãi suất ngân hàng (lãi mẹ đẻ lãi con)</h2>
+<script>
+    let initialMoney = parseInt(prompt('Nhập vào số tiền ban đầu : '));
+    let numOfMonths = parseInt(prompt('Nhập vào số tháng cho vay : '));
+    let count = numOfMonths;
+    let bank = prompt('Ngân hàng GPBank thì nhập 1 , ngân hàng MBbank thì nhập 2 , ngân hàng Vietcombank thì nhập 3');
+    switch (bank) {
+        case '1' :
+        {
+            document.write('Ngân hàng GPBank có lãi suất cho vay 1 tháng là 3.5%' + '<br><br>');
+            while (count!=0) {
+                initialMoney = initialMoney + (3.5/100)*initialMoney;
+                count--;
+            }
+            document.write('Sau '+ numOfMonths + ' tháng cho vay thì tổng tiền gốc lẫn lãi là : '+ initialMoney);
+            break;
+        }
+        case '2' :
+        {
+            document.write('Ngân hàng MBbank có lãi suất cho vay 1 tháng là 2.5%' + '<br><br>');
+            while (count!=0) {
+                initialMoney = initialMoney + (2.5/100)*initialMoney;
+                count--;
+            }
+            document.write('Sau '+ numOfMonths + ' tháng cho vay thì tổng tiền gốc lẫn lãi là : '+ initialMoney);
+            break;
+        }
+        case '3' :
+        {
+            document.write('Ngân hàng Vietcombank có lãi suất cho vay 1 tháng là 3%' + '<br><br>');
+            while (count!=0) {
+                initialMoney = initialMoney + (3/100)*initialMoney;
+                count--;
+            }
+            document.write('Sau '+ numOfMonths + ' tháng cho vay thì tổng tiền gốc lẫn lãi là : '+ initialMoney);
+            break;
+        }
+    }
+</script>
+</body>
+</html>

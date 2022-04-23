@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển mét sang feet</title>
+</head>
+<body>
+<h2>Chuyển đổi độ dài</h2>
+<script>
+    let choose = prompt('Nhập 1 nếu bạn muốn chọn đổi chiều dài từ mét sang feet, chọn 2 nếu bạn muốn đổi từ feet sang mét');
+    let dodai = 0;
+    let dodaiNotfix = 0;
+    if (choose == 1) {
+        dodai = parseFloat(prompt('Nhập vào chiều dài (mét) : '));
+        dodaiNotfix = dodai;
+        dodai = dodai*3.2808;
+        document.write('Mét : ' + dodaiNotfix + ' --> Feet : '+ dodai);
+    } else if (choose == 2) {
+        dodai = parseFloat(prompt('Nhập vào chiều dài (feet) : '));
+        dodaiNotfix = dodai;
+        dodai = dodai/3.2808;
+        document.write('Feet : ' + dodaiNotfix + ' --> Mét : '+ dodai);
+    } else {
+        alert('Nhập không hợp lệ');
+    }
+</script>
+</body>
+</html>

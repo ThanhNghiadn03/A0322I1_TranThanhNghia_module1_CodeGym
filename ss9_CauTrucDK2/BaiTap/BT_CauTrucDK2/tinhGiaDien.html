@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<script>
+    /*                      Đơn giá(đồng/kWh)
+    Cho kWh từ 0 - 50	    1678
+    Cho kWh từ 51 - 100	    1734
+    Cho kWh từ 101 - 200	2014
+    Cho kWh từ 201 - 300	2536
+    Cho kWh từ 301 - 400	2834
+    Cho kWh từ 401 trở lên	2927
+    */
+    let kwh = parseInt(prompt('Nhập vào số điện đã dùng trong tháng : '));
+    let electricFee = 1;
+    if (kwh > 0 && kwh<=50) {
+        electricFee = kwh*1678;
+        document.write('Số điện đã sử dụng trong tháng là : ' + kwh + ' (kWh)<br><br>');
+        document.write('Số tiền điện phải đóng là : ' + electricFee + ' VND');
+    } else if (kwh <= 100) {
+        electricFee = 50*1678 + (kwh-50)*1734;
+        document.write('Số điện đã sử dụng trong tháng là : ' + kwh + ' (kWh)<br><br>');
+        document.write('Số tiền điện phải đóng là : ' + electricFee + ' VND');
+    } else if (kwh <= 200) {
+        electricFee = 50*1678 + 50*1734 + (kwh-100)*2014;
+        document.write('Số điện đã sử dụng trong tháng là : ' + kwh + ' (kWh)<br><br>');
+        document.write('Số tiền điện phải đóng là : ' + electricFee + ' VND');
+    } else if (kwh <= 300) {
+        electricFee = 50*1678 + 50*1734 + 100*2014 + (kwh-200)*2536;
+        document.write('Số điện đã sử dụng trong tháng là : ' + kwh + ' (kWh)<br><br>');
+        document.write('Số tiền điện phải đóng là : ' + electricFee + ' VND');
+    } else if (kwh <= 400) {
+        electricFee = 50*1678 + 50*1734 + 100*2014 + 100*2536 + (kwh-300)*2834;
+        document.write('Số điện đã sử dụng trong tháng là : ' + kwh + ' (kWh)<br><br>');
+        document.write('Số tiền điện phải đóng là : ' + electricFee + ' VND');
+    } else {
+        electricFee = 50*1678 + 50*1734 + 100*2014 + 100*2536 + 100*2834 + (kwh-400)*2927;
+        document.write('Số điện đã sử dụng trong tháng là : ' + kwh + ' (kWh)<br><br>');
+        document.write('Số tiền điện phải đóng là : ' + electricFee + ' VND');
+    }
+</script>
+</body>
+</html>
