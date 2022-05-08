@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<button type="button" onclick="input()">Input</button>
+<button type="button" onclick="output()">Output</button>
+<script>
+    let parameter;
+    function input() {
+        parameter = parseInt(prompt('Nhập vào 1 số : '));
+    }
+    function increase(number) {
+        number++;
+        return number;
+    }
+    function output() {
+        let result = increase(parameter);
+        alert(result);
+    }
+</script>
+</body>
+</html>

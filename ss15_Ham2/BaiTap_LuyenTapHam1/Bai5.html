@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+    <style>
+        td {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<h1>Tìm ngôi sao và chòm sao tương ứng</h1>
+<table cellpadding="10">
+    <tr>
+        <td>Kết quả (Tên chòm sao) : </td>
+        <td id="result"></td>
+    </tr>
+</table>
+<script>
+    let starArray = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe','Regulus'];
+    let constelArray = [' Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let userInput = prompt('Nhập vào một ngôi sao để tìm chòm sao tương ứng');
+
+    function searchConstellation(star) {
+        let searchIndex = starArray.indexOf(star);
+        if (starArray.indexOf(star) >= 0) {
+            return constelArray[searchIndex];
+        } else {
+            return 'Không tìm được chòm sao của ngôi sao này';
+        }
+    }
+    document.getElementById('result').innerHTML = searchConstellation(userInput);
+</script>
+</body>
+</html>
