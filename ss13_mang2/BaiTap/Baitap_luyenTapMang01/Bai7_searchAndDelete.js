@@ -9,13 +9,17 @@ let stringArray = arrayInteger.join(',');
 document.write(stringArray);
 if (searchIndex < 0) {
     alert(value + ' is not in Array');
-} else {
-    for (let i=searchIndex ; i<(arrayInteger.length-1) ; i++) {
+}
+let count =0;
+while (searchIndex >= 0){
+    for (let i=searchIndex ; i<(arrayInteger.length-1-count) ; i++) {
         let tmp = arrayInteger[i];
         arrayInteger[i] = arrayInteger[i+1];
         arrayInteger[i+1] = tmp;
     }
-    arrayInteger[arrayInteger.length-1] = 0;
+    arrayInteger[arrayInteger.length-1-count] = 0;
+    count++;
+    searchIndex = arrayInteger.indexOf(value);
 }
 document.write('<br><br>Mảng của bạn hiện tại : <br><br>');
 stringArray = arrayInteger.join(',');
