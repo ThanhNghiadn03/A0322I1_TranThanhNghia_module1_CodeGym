@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let numOfEle = parseInt(prompt('Nhập vào số lượng phần tử : '));
+    document.write('Các phần tử trong mảng : ');
+    for (let i=0 ; i< numOfEle ; i++) {
+        array[i] = prompt('Nhập vào phần tử thứ '+ i);
+        document.write(array[i] + '   ');
+    }
+    let search = prompt('Nhập vào 1 kí tự để kiểm tra xem có tồn tại trong mảng hay không ?');
+    let count = 0;
+    function checkArray(array) {
+        if (array.indexOf(search)>0) {
+            for (let i=0 ; i<numOfEle; i++) {
+                if (array[i] == search) {
+                    count++;
+                }
+            }
+        } else {
+            count = -1;
+        }
+        return count;
+    }
+    let result = checkArray(array);
+    result > 0 ? document.write('<br><br>Số lần xuất hiện của ' + search + ' là : ' + result) : document.write('<br><br>'+ search + ' không xuất hiện trong mảng');
+</script>
+</body>
+</html>

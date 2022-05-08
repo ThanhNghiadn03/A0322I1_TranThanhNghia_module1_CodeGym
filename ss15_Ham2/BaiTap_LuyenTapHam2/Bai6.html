@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let userNumber = parseInt(prompt('Nhập vào 1 số để kiểm tra đó là số gì : '));
+    function check(number) {
+        if (number > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    let result = check(userNumber);
+    result == true ? alert('Đây là số nguyên dương') : alert('Đây là số nguyên âm');
+</script>
+</body>
+</html>

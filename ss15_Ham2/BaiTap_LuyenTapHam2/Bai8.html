@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let numOfEle = parseInt(prompt('Nhập vào số lượng phần tử : '));
+    document.write('Các phần tử trong mảng : ');
+    for (let i=0 ; i< numOfEle ; i++) {
+        array[i] = prompt('Nhập vào số nguyên thứ '+ i);
+        document.write(array[i] + '   ');
+    }
+    function reversedArray(array) {
+        let reverse = [];
+        reverse = array.reverse();
+        return reverse;
+    }
+    let result = reversedArray(array);
+    document.write('<br><br>Các phần tử sau khi được đảo ngược : ');
+    for (let i =0 ; i<numOfEle ; i++) {
+        document.write(result[i] + '  ');
+    }
+</script>
+</body>
+</html>

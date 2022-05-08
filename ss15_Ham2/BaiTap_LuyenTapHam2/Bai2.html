@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    function areaCircle(radius) {
+        let area = 3.14*radius*radius;
+        return area;
+    }
+    
+    function diameterCircle(radius) {
+        let diameter = 2*3.14*radius;
+        return diameter;
+    }
+
+    let userRadius = parseFloat(prompt('Nhập vào bán kính hình tròn để tính chu vi và diện tích : '));
+    let resultArea = areaCircle(userRadius);
+    let resultDiameter = diameterCircle(userRadius);
+    document.write('Diện tích của hình tròn có bán kính '+ userRadius + ' là : '+resultArea);
+    document.write('<br><br>Chu vi của hình tròn có bán kính '+userRadius+' là : '+resultDiameter);
+
+</script>
+
+</body>
+</html>

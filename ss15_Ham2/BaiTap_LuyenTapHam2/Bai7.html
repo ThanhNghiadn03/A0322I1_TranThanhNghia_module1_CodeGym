@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let number = []
+    number[0]= parseInt(prompt('Nhập vào số thứ 1 : '));
+    number[1] = parseInt(prompt('Nhập vào số thứ 2 : '));
+    function swap(number) {
+        let tmp = number[0];
+        number[0] = number[1];
+        number[1] = tmp;
+    }
+    swap(number);
+    document.write('Số thứ nhất : ' + number[0]);
+    document.write('<br><br>Số thứ hai : '+ number[1]);
+</script>
+</body>
+</html>

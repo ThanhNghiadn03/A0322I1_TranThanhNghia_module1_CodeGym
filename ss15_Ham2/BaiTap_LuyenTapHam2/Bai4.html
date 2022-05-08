@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let numberArray = ['0','1','2','3','4','5','6','7','8','9']
+    let character = prompt('Nhập vào 1 kí tự : ');
+    function checkCharacter(char) {
+        if (numberArray.indexOf(char) >= 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    if (checkCharacter(character) == true) {
+        alert('Đây là kí tự số');
+    } else {
+        alert('Đây không phải là kí tự số');
+    }
+</script>
+</body>
+</html>
