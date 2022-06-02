@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 2</title>
+</head>
+<body>
+<script>
+    function friendNumber(a,b) {
+        let soLuongUocA = 0;
+        let soLuongUocB = 0;
+        let uocCuaA = [];
+        let uocCuaB = [];
+        let tongUocA = 0;
+        let tongUocB = 0;
+        for (let i=1 ; i<=a ; i++) {
+            if (a % i == 0) {
+                uocCuaA[soLuongUocA++] = i;
+            }
+        }
+        for (let i=1 ; i<=b ; i++) {
+            if (b%i==0) {
+                uocCuaB[soLuongUocB++] = i;
+            }
+        }
+        for (let i=0 ; i<(soLuongUocA-1) ; i++) {
+            tongUocA += uocCuaA[i];
+        }
+        for (let i=0 ; i<(soLuongUocB-1) ; i++) {
+            tongUocB += uocCuaB[i];
+        }
+        if (tongUocA==b && tongUocB ==a) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    let number1 = parseInt(prompt('Nhập vào số thứ nhất : '));
+    let number2 = parseInt(prompt('Nhập vào số thứ hai : '));
+    if (friendNumber(number1,number2)==true) {
+        alert(number1 + ' và '+number2+' là cặp số thân thiết !!!');
+    } else {
+        alert(number1 + ' và '+number2+' không phải là cặp số thân thiết !!!');
+    }
+</script>
+</body>
+</html>

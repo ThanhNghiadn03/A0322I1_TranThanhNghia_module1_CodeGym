@@ -1,20 +1,17 @@
 class Circle {
-    constructor(radius , color) {
+    constructor(x,y,radius) {
+        this.x = x;
+        this.y = y;
         this.radius = radius;
-        this.color = color;
-    }
-    getRadius() {
-        return this.radius;
-    }
-
-    setRadius(radius) {
-        this.radius = radius;
-    }
-    getArea() {
-        return Math.PI*this.radius*this.radius;
     }
 
 }
-let radius1 = new Circle('12.6','Vang');
-let valueArea = radius1.getArea();
-document.write('Dien tich cua hinh tron do la : '+ valueArea);
+function createCircle(){
+    var ctx = document.getElementById("Circle").getContext("2d");
+    var circle= new Circle(500, 500, 80);
+    ctx.beginPath();
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    ctx.fill();
+}
+
+createCircle();

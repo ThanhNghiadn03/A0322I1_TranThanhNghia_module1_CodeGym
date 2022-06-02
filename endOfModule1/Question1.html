@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 1</title>
+</head>
+<body>
+<script>
+    let arrNumber = [];
+    let sum = 0;
+    let countNumber = 0;
+    let numOfElement = parseInt(prompt('Nhập vào số lượng phần tử trong mảng : '));
+    while(numOfElement > 50) {
+        alert('Chỉ được phép nhập số lượng tối đa là 50 phần tử !!!');
+        numOfElement = parseInt(prompt('Mời bạn nhập lại số lượng phần tử của mảng : '));
+    }
+    for (let i=0 ; i<numOfElement ; i++) {
+        arrNumber[i] = parseInt(prompt('Nhập vào phần tử thứ '+ i + ' : '));
+    }
+    document.write('Các phần tử trong mảng là : ');
+    for (let i=0 ; i<numOfElement; i++) {
+        document.write(arrNumber[i]+'   ');
+    }
+    document.write('<br><br>Các số lẻ ở vị trí chẵn trong mảng là : ');
+    for (let i=0 ; i<numOfElement ; i++) {
+        if (i%2==0 && arrNumber[i]%2!=0) {
+            sum+=arrNumber[i];
+            document.write(arrNumber[i]+'  ');
+            countNumber++;
+        }
+    }
+    sum = sum/countNumber;
+    document.write('<br><br>Trung bình cộng các số lẻ ở vị trí chẵn : '+sum);
+</script>
+</body>
+</html>
